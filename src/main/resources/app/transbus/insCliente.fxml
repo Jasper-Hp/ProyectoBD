@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXRadioButton?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import io.github.palexdev.materialfx.controls.MFXPopup?>
+
+
+<AnchorPane fx:id="AnchorPane" prefHeight="540.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.transbus.Controller.insCliente">
+
+    <BorderPane prefHeight="555.0" prefWidth="640.0">
+        <top>
+            <Pane prefHeight="34.0" prefWidth="640.0" style="-fx-background-color: #3993d3;" stylesheets="@../../css/ButtonStyle.css" BorderPane.alignment="CENTER">
+                <children>
+                    <ImageView fitHeight="29.0" fitWidth="28.0" layoutX="14.0" layoutY="4.0" onMouseClicked="#loadCliente" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <image>
+                            <Image url="@../../icons/Table/img.png" />
+                        </image>
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                    </ImageView>
+                    <Label layoutX="214.0" layoutY="9.0" style="-fx-font-size: 18;" text="Agregar  Marca de Autobús" textFill="WHITE">
+                        <font>
+                            <Font name="System Bold" size="15.0" />
+                        </font>
+                    </Label>
+                </children>
+            </Pane>
+        </top>
+        <center>
+            <GridPane prefHeight="425.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" stylesheets="@../../css/ButtonStyle.css" BorderPane.alignment="CENTER">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                </rowConstraints>
+
+                <VBox layoutX="224.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="203.13671875" />
+                    <Label prefHeight="45.0" prefWidth="213.0" text="Cantidad de asientos ">
+                        <font>
+                            <Font size="14.0" />
+                        </font></Label>
+                    <MFXTextField prefHeight="58.0" prefWidth="213.0" promptText="Inserte la cantidad de asientos" styleClass="text-field-blue" />
+                </VBox>
+                <VBox layoutX="224.0" layoutY="117.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1">
+                    <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="203.13671875" />
+                        <Label prefHeight="45.0" prefWidth="213.0" text="Nombre de la Marca">
+                            <font>
+                                <Font size="14.0" />
+                            </font></Label>
+                        <MFXTextField prefHeight="49.0" prefWidth="217.0" promptText="Inserte el nombre de la Marca " styleClass="text-field-blue" />
+                    </children>
+                </VBox>
+                <VBox layoutX="224.0" layoutY="117.0" prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <Text strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="203.13671875" />
+                    <Label prefHeight="32.0" prefWidth="213.0" text="Consumo de Combustible Km/L">
+                        <font>
+                            <Font size="14.0" />
+                        </font></Label>
+                    <MFXTextField prefHeight="58.0" prefWidth="213.0" promptText="Inserte el consumo" styleClass="text-field-blue" />
+                </VBox>
+                <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <children>
+                        <Label alignment="CENTER" layoutY="14.0" prefHeight="24.0" prefWidth="213.0" text="Tipo de Combustible">
+                            <font>
+                                <Font size="14.0" />
+                            </font></Label>
+                        <Group layoutX="14.0" layoutY="43.0" />
+
+                        <MFXRadioButton fx:id="dieselRadio" layoutX="13.0" layoutY="47.0" selected="true" text="Diesel">
+                            <font>
+                                <Font size="13.0" />
+                            </font></MFXRadioButton>
+
+
+                        <MFXRadioButton fx:id="gasolinaRadio" layoutX="117.0" layoutY="47.0" text="Gasolina">
+                            <font>
+                                <Font size="13.0" />
+                            </font></MFXRadioButton>
+                    </children>
+
+                </Pane>
+            </GridPane>
+        </center>
+        <bottom>
+            <Pane prefHeight="70.0" prefWidth="640.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+                <children>
+
+                    <Button fx:id="btnAceptar" alignment="BASELINE_LEFT" layoutX="90.0" layoutY="14.0" mnemonicParsing="false" onAction="#onAceptar" prefHeight="32.0" prefWidth="123.0" stylesheets="@../../css/ButtonStyle.css" text="Aceptar" textFill="WHITE">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <graphic>
+                            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../icons/botones/icons8_Checkmark_48px.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                    <Button fx:id="btnMenuPrincipal11" alignment="BASELINE_LEFT" layoutX="425.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="123.0" stylesheets="@../../css/ButtonStyle.css" text="Cancelar" textFill="WHITE">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <graphic>
+                            <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                <image>
+                                    <Image url="@../../icons/botones/icons8_Multiply_48px.png" />
+                                </image>
+                            </ImageView>
+                        </graphic>
+                        <font>
+                            <Font size="15.0" />
+                        </font>
+                    </Button>
+                </children>
+            </Pane>
+        </bottom>
+
+    </BorderPane>
+
+</AnchorPane>

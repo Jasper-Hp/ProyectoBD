@@ -1,0 +1,9 @@
+
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(»‡ΐ‘
+Q	java:S125"<This block of commented-out lines of code should be removed.(αί―
+Q	java:S125&"<This block of commented-out lines of code should be removed.(αί―
+Q	java:S1253"<This block of commented-out lines of code should be removed.(αί―
+Q	java:S125@"<This block of commented-out lines of code should be removed.(αί―
+Q	java:S125L"<This block of commented-out lines of code should be removed.(αί―
+T
+java:S1128"9Remove this unused import 'javafx.scene.image.ImageView'.(αÿ®Γόÿÿÿÿ

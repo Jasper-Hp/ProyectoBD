@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity"  maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="557.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.transbus.Controller.GestionController">
+    <BorderPane fx:id="contentAreaChiquita" layoutX="-1.0" prefHeight="557.0" prefWidth="640.0" style="-fx-background-color: #3993d3;">
+        <center>
+            <GridPane prefHeight="550.0" prefWidth="634.0" stylesheets="@../../css/ButtonStyle.css" BorderPane.alignment="CENTER">
+
+                <columnConstraints>
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3" />
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3" />
+                    <ColumnConstraints hgrow="ALWAYS" percentWidth="33.3" />
+                </columnConstraints>
+
+                <rowConstraints>
+                    <RowConstraints percentHeight="33.3" vgrow="ALWAYS" />
+                    <RowConstraints percentHeight="33.3" vgrow="ALWAYS" />
+                    <RowConstraints percentHeight="33.3" vgrow="ALWAYS" />
+                </rowConstraints>
+
+                <VBox fx:id="VboxHojaRuta" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#loadHojaRuta" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Gestion/icons8_Waypoint_Map_52px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Hoja de Ruta" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxAuto" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.rowIndex="1">
+                    <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#loadauto" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Gestion/icons8_Double_Decker_Bus_50px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Autobús" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxSolicitud" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.columnIndex="1">
+                    <ImageView fitHeight="60.0"  fitWidth="80.0" onMouseClicked="#loadSolicitudes" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Gestion/icons8_Reserve_50px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Solicitud" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                        Solicited
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxGrupoTuristico" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <ImageView fitHeight="60.0" onMouseClicked="#loadGrupoTuristico" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Gestion/icons8_User_Groups_50px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Grupo Turistico" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                        Solicited
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxServicios" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.columnIndex="2">
+                    <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#loadServicio" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Menu/icons8_Networking_Manager_50px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Servicio" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxServicioRealizado" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <ImageView fitHeight="60.0" onMouseClicked="#loadServicioRealizado" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Menu/icons8_Networking_Manager_50px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Servico Realizado" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxConductor" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css">
+                    <ImageView fitHeight="60.0" onMouseClicked="#loadConductores" fitWidth="80.0" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                  <image>
+                     <Image url="@../../icons/Gestion/img.png" />
+                  </image>
+<!--                      //  <Image url="@../../icons/Gestion/icons8_Driving_50px_1.png" />-->
+                    </ImageView>
+                    <Text fill="WHITE" text="Conductor" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+
+                    </Text>
+                </VBox>
+
+
+                <VBox fx:id="VboxAutoBus" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.rowIndex="2">
+                    <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#loadautoBus" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                  <image>
+                     <Image url="@../../icons/Gestion/img_1.png" />
+                  </image>
+<!--                        <Image url="@../../icons/Gestion/icons8_BMW_50px.png" />-->
+                    </ImageView>
+                    <Text fill="WHITE" text="Marcas de Autobús" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Text>
+                </VBox>
+
+                <VBox fx:id="VboxCliente" alignment="CENTER" spacing="5" stylesheets="@../../css/ButtonStyle.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <ImageView fitHeight="60.0" fitWidth="80.0" onMouseClicked="#loadCliente" pickOnBounds="true" preserveRatio="true" styleClass="image">
+                        <cursor>
+                            <Cursor fx:constant="HAND" />
+                        </cursor>
+                        <Image url="@../../icons/Gestion/icons8_User_48px.png" />
+                    </ImageView>
+                    <Text fill="WHITE" text="Cliente" textAlignment="CENTER">
+                        <font>
+                            <Font size="16.0" />
+                        </font>
+                    </Text>
+                </VBox>
+
+
+            </GridPane>
+        </center>
+    </BorderPane>
+    <Separator orientation="VERTICAL" prefHeight="540.0" prefWidth="0.0" />
+</AnchorPane>

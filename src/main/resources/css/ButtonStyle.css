@@ -1,0 +1,35 @@
+.button
+{
+-fx-background-color :  #53a4dd;
+-fx-background-radius : 0em;
+}
+.button:hover
+{
+-fx-background-color : #8fc3ea;
+}
+.button:pressed
+{
+-fx-background-color : #19578b;
+}
+.button:focused {
+    -fx-background-color : #3e2d9f;
+    -fx-border-color : #CDD1D6;
+    -fx-border-width : 0px 0px 0px 3px;
+}
+.image {
+    -fx-effect: none;
+    -fx-scale-x: 1;
+    -fx-scale-y: 1;
+}
+
+.image:hover{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-transition: -fx-scale-x 0.2s, -fx-scale-y 0.2s;
+}
+.text-field-blue {
+    -mfx-text-fill: #3993d3;
+    -mfx-focus-color: #3993d3;
+    -mfx-unfocus-color: #3993d3;
+}
